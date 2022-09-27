@@ -9,5 +9,8 @@ class ContoBancario(Persona):
     def getSaldo(self):
         return self.saldo
 
-    def versa(self):
-        
+    def versa(self, versamento: int):
+        self.saldo = self.saldo + versamento
+
+    def preleva(self, prelevamento: int):
+        self.saldo = self.saldo - prelevamento
