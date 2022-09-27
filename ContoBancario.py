@@ -13,4 +13,7 @@ class ContoBancario(Persona):
         self.saldo = self.saldo + versamento
 
     def preleva(self, prelevamento: int):
-        self.saldo = self.saldo - prelevamento
+        if self.saldo < prelevamento:
+            return -1
+        else:
+            self.saldo = self.saldo - prelevamento
