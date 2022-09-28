@@ -1,10 +1,10 @@
-from persona import Persona
+from Persona import Persona
 
 class ContoBancario(Persona):
     def __init__(self, nome: str, cognome: str, conto):
         super().__init__(nome, cognome)
         self.conto = conto
-        self.saldo = int(0)
+        self.saldo = int(100)
 
     def getSaldo(self):
         return self.saldo
